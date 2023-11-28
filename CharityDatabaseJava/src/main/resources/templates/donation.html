@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Donation Data</title>
+</head>
+<body>
+	
+	<h2>Donation Page</h2>
+	<a href="donations">See All Donation Records</a><br>
+	<a href="donation-add">Add Record</a><br>
+	<a href="donation-delete">Delete Record</a><br>
+	<a href="donation-update">Update Record</a><br>
+	<p>Search Donation Records By Date Range</p>
+	<form method="get" th:action="@{/donations/date-range}">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" required>
+        <button type="submit">Search</button>
+    </form>
+
+</body>
+</html>

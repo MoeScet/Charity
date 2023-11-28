@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>Update Donation Record</title>
+</head>
+<body>
+    <h1>Update Donation Record Form</h1>
+    <form action="donation-update" method="post">
+    	<label for="donationId">Donation ID:</label>
+        	<input type="text" id="donationId" name="donationId" required>
+        <br>
+        
+        <label for="donor">Donor:</label>
+        <select id="donor" name="donor">
+            <option value="">--Select Donor--</option>
+            <th:block th:each="donor : ${donorlist}">
+                <option th:value="${donor.donorId}" th:text="${donor.donorId} + ' ' + ${donor.firstName} + ' ' + ${donor.lastName}"></option>
+            </th:block>
+        </select>
+        <br>
+        
+        <label for="beneficiary">Beneficiary:</label>
+        <select id="beneficiary" name="beneficiary">
+            <option value="">--Select Beneficiary--</option>
+            <th:block th:each="beneficiary : ${beneficiarylist}">
+                <option th:value="${beneficiary.beneficiaryId}" th:text="${beneficiary.beneficiaryId} + ' ' + ${beneficiary.name}"></option>
+            </th:block>
+        </select>
+        <br>
+        
+        <label for="agentId">Agent ID:</label>
+        <select id="agentId" name="agentId">
+            <option th:value="${currentAgent}" th:text="${currentAgent.agentId}"></option>
+        </select>
+        <br>
+        
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount">
+        <br>
+        
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+        	<option value="">--Select Donation Type--</option>
+            <option value="IN">IN</option>
+            <option value="OUT">OUT</option>
+        </select>
+        <br>
+        
+        <label for="date">Date:</label>
+		<input type="date" id="date" name="date">
+		<br>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>Update Beneficiary</title>
+</head>
+<body>
+    <h1>Update Beneficiary Form</h1>
+    <h2 th:text="'Beneficiary ID - ' + ${id}">Beneficiary Profile</h2>
+    	<form method="POST" th:object="${beneficiary}" th:action="@{/beneficiaries/{id}/update(id=${id})}">	
+			<label>Last Name:</label>
+			<input type="text" th:field="*{name}"/><br/>
+	
+			<label>Email:</label>
+			<input type="email" th:field="*{email}"/><br/>
+	
+			<button type="submit">Update Beneficiary</button>
+		</form>
+    
+</body>
+</html>

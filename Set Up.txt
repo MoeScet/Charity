@@ -1,0 +1,12 @@
+1. Create new schema named "charity"
+sql query - CREATE SCHEMA charity;
+
+2. Run CharityDatabaseApplication.java in IDE
+
+3. Populate "agent" table
+sql query -
+INSERT INTO agent (agent_id, name, password)
+VALUES 
+  ("Agent1", "Amy Pohler", "password1"),
+  ("Agent2", "Betty White", "password2"),
+  ("Agent3", "Charles Boyle", "password3");

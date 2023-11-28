@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Beneficiary Donations</title>
+    <style>
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donations Received By ID: [[${donations[0].beneficiary.beneficiaryId}]]</h1>
+    <table style="width: 45%;">
+        <thead>
+            <tr>
+                <th>Donation ID</th>
+                <th>Donor Id</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="donation : ${donations}">
+                <td class="text-center" th:text="${donation.donationId}"></td>
+                <td class="text-center" th:text="${donation.donor.donorId}"></td>
+                <td class="text-center" th:text="${donation.amount}"></td>
+                <td class="text-center" th:text="${donation.date}"></td>
+                <td class="text-center" th:text="${donation.type}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+Data management application for a charity 
+
+Features
+-Agent Login
+-Agent can add/remove/update donor/beneficiary/transaction details
+-Total donations received from donors and contributed to beneficiaries in a timeframe can be retrieved and downloaded as csv
+-Balance can be calculated
+
+Model
+-----
+Agent
+-Id
+-Name
+-Password
+
+Donor
+-Id
+-Name
+-Email
+-Contact
+
+Beneficiary
+-Id
+-Name
+-Email
+-Contact
+
+Transaction
+-Id
+-Date
+-Donor
+-Beneficiary
+-Agent
+-Amount
+
+
+
+

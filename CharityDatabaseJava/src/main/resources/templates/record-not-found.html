@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="UTF-8">
+<title>Record Not Found</title>
+</head>
+<body>
+	
+	<div th:if="${error}" class="alert alert-danger">
+   		<p th:text="${error}" style="font-weight: bold; color: red;"></p>
+	</div>
+	
+
+</body>
+</html>

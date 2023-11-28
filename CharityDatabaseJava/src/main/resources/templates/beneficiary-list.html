@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Beneficiary List</title>
+    <style>
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<h2>List Of All Beneficiaries</h2>
+    <table style="width: 65%;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="beneficiary : ${beneficiarylist}">
+                <td class="text-center"><a th:href="@{/beneficiaries/{beneficiaryId}(beneficiaryId=${beneficiary.beneficiaryId})}" th:text="${beneficiary.beneficiaryId}"></a></td>
+                <td class="text-center" th:text="${beneficiary.name}"></td>
+                <td class="text-center" th:text="${beneficiary.email}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

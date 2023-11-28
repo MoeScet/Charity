@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Beneficiary</title>
+</head>
+<body>
+    <h1>Delete Beneficiary Form</h1>
+    <form action="/beneficiary-delete" method="post">
+        <label for="beneficiaryId">Beneficiary ID:</label>
+        <input type="text" id="beneficiaryId" name="beneficiaryId" required>
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

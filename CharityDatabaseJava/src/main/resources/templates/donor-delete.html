@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Donor</title>
+</head>
+<body>
+    <h1>Delete Donor Form</h1>
+    <form action="/donor-delete" method="post">
+        <label for="donorId">Donor ID:</label>
+        <input type="text" id="donorId" name="donorId" required>
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

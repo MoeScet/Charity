@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Donor</title>
+</head>
+<body>
+    <h1>By ID</h1>
+    <form action="/donor-search" method="post">
+        <label for="donorId">Donor ID:</label>
+        <input type="text" id="donorId" name="donorId" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

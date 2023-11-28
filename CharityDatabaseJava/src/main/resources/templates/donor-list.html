@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="UTF-8">
+<title>Donor List</title>
+<style>
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>List Of All Donors</h2>		
+<table style="width: 65%;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="donor : ${donorlist}">
+      <td><a th:href="@{/donors/{donorId}(donorId=${donor.donorId})}" th:text="${donor.donorId}"></a></td>
+      <td class="text-center" th:text="${donor.firstName}"></td>
+      <td class="text-center" th:text="${donor.lastName}"></td>
+      <td class="text-center" th:text="${donor.email}"></td>
+      <td class="text-center" th:text="${donor.mobile}"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>
+

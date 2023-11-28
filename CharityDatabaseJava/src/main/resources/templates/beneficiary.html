@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Beneficiary Data</title>
+</head>
+<body>
+	
+	<h2>Beneficiary Page</h2>
+	<a href="beneficiaries">See All Beneficiaries</a><br>
+	<a href="beneficiary-add">Add Beneficiary</a><br>
+	<form th:action="@{/beneficiaries}" method="get">
+    	<input type="text" name="search" placeholder="Search by name or email">
+    	<button type="submit">Search</button>
+	</form>
+
+</body>
+</html>

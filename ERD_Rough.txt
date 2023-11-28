@@ -1,0 +1,16 @@
+Donors
+PK-ID_Donor - INT
+-Name - VARCHAR(50)
+-Email - VARCHAR(50)
+-Contact - INT
+
+Beneficiaries
+PK-ID_Benificiary - INT
+-Name - VARCHAR(50)
+
+Transactions
+PK-ID_Transaction
+-Date - DATETIME
+FK-ID_Donor - INT
+FK-ID_Benificiary - INT
+-Amount - DOUBLE

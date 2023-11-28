@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Donor Data</title>
+</head>
+<body>
+	
+	<h2>Donor Page</h2>
+	<a href="donors">See All Donors</a><br>
+	<a href="donor-add">Add Donor</a><br>
+	
+	<form th:action="@{/donors}" method="get">
+    	<input type="text" name="search" placeholder="Search by name or email">
+    	<button type="submit">Search</button>
+	</form>
+
+</body>
+</html>
